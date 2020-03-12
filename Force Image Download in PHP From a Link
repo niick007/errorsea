@@ -1,0 +1,16 @@
+<?php
+    //file path in server
+    $file_path = "https://errorsea.com/wp-content/uploads/2019/04/WhatsApp-Image-2019-04-13-at-22.00.11.jpeg";
+    
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
+    header('Expires: 0');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($file_path));
+    
+    // Clear output buffer
+    flush();
+    readfile($file_path);
+    exit();
+?>
