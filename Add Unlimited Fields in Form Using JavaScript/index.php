@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<body>
 		<form id="form" method="POST" action="save_data.php">
